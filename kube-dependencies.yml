@@ -37,13 +37,13 @@
 
    - name: install kubelet
      apt:
-       name: kubelet=1.27.0
+       name: kubelet
        state: present
        update_cache: true
 
    - name: install kubeadm
      apt:
-       name: kubeadm=1.27.0
+       name: kubeadm
        state: present
 
 - hosts: masters
@@ -51,7 +51,7 @@
   tasks:
    - name: install kubectl
      apt:
-       name: kubectl=1.27.0
+       name: kubectl
        state: present
        force: yes
 
